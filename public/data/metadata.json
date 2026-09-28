@@ -1,0 +1,37 @@
+{
+  "width": 1025,
+  "height": 1025,
+  "bounds": {
+    "west": -110.12,
+    "south": 44.35,
+    "east": -108.85,
+    "north": 45.15
+  },
+  "mercator": {
+    "west": -12258502.326155286,
+    "south": 5519766.216040407,
+    "east": -12117126.572847828,
+    "north": 5645166.908574269
+  },
+  "metersPerUnit": 1000,
+  "centerLat": 44.75,
+  "groundWidthKm": 100.402992466682,
+  "groundHeightKm": 89.0577379305808,
+  "minElevation": 1161,
+  "maxElevation": 3843,
+  "elevationFile": "height.bin",
+  "imageryFile": "imagery.jpg",
+  "heightEncoding": "uint16 little-endian metres, north-to-south rows, west-to-east columns",
+  "heightSource": "Mapzen elevation tiles (Terrarium encoding), AWS public elevation-tiles-prod",
+  "imagerySource": "USGS, USDA, The National Map: Orthoimagery (NAIP); public domain",
+  "imagery": {
+    "width": 4000,
+    "height": 3548,
+    "extent3857": {
+      "west": -12258502.326155286,
+      "south": 5519766.216040407,
+      "east": -12117126.572847828,
+      "north": 5645166.908574269
+    }
+  }
+}

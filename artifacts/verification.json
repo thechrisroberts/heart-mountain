@@ -1,0 +1,74 @@
+{
+  "checkedAt": "2026-09-28T11:09:50.792Z",
+  "viewport": [
+    1440,
+    1100
+  ],
+  "mobile": [
+    390,
+    844
+  ],
+  "errors": [],
+  "checks": [
+    {
+      "name": "3D renders with local assets and no JavaScript errors",
+      "pass": true
+    },
+    {
+      "name": "All five timeline stages update explanation and accessible slider text",
+      "pass": true
+    },
+    {
+      "name": "Playback advances, pauses, changes speed, and stops at the end",
+      "pass": true
+    },
+    {
+      "name": "Camera presets, orbit, and zoom change the rendered view",
+      "pass": true
+    },
+    {
+      "name": "Slide overlay, labels, and vertical scale respond",
+      "pass": true
+    },
+    {
+      "name": "2D mode renders synchronized stages and disables 3D controls",
+      "pass": true
+    },
+    {
+      "name": "Reset from 2D restores 3D and all defaults",
+      "pass": true
+    },
+    {
+      "name": "Mechanism tabs update content and scientific links are present",
+      "pass": true
+    },
+    {
+      "name": "Mobile fits viewport and 2D panel remains readable and scrollable",
+      "pass": true
+    },
+    {
+      "name": "Keyboard timeline control exposes named stages",
+      "pass": true
+    },
+    {
+      "name": "Ground view uses an attributed real photograph",
+      "pass": true
+    },
+    {
+      "name": "Landmark navigation synchronizes controls",
+      "pass": true
+    },
+    {
+      "name": "Comparison squares preserve actual kilometer dimensions",
+      "pass": true
+    },
+    {
+      "name": "Geospatial assets have consistent dimensions and bounds",
+      "pass": true
+    },
+    {
+      "name": "No-WebGL devices receive a working 2D fallback",
+      "pass": true
+    }
+  ]
+}

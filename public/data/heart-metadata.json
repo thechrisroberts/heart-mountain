@@ -1,0 +1,37 @@
+{
+  "width": 513,
+  "height": 513,
+  "bounds": {
+    "west": -109.19,
+    "south": 44.61,
+    "east": -109.05,
+    "north": 44.74
+  },
+  "mercator": {
+    "west": -12154975.19971754,
+    "south": 5560331.514366655,
+    "east": -12139390.471006483,
+    "north": 5580682.258789208
+  },
+  "metersPerUnit": 1000,
+  "centerLat": 44.675,
+  "groundWidthKm": 11.082399082507338,
+  "groundHeightKm": 14.471542976351296,
+  "minElevation": 1509,
+  "maxElevation": 2473,
+  "elevationFile": "heart-height.bin",
+  "imageryFile": "heart-imagery.jpg",
+  "heightEncoding": "uint16 little-endian metres, north-to-south rows, west-to-east columns",
+  "heightSource": "Mapzen elevation tiles (Terrarium encoding), AWS public elevation-tiles-prod",
+  "imagerySource": "USGS, USDA, The National Map: Orthoimagery (NAIP); public domain",
+  "imagery": {
+    "width": 2297,
+    "height": 3000,
+    "extent3857": {
+      "west": -12154975.19971754,
+      "south": 5560331.514366655,
+      "east": -12139390.471006483,
+      "north": 5580682.258789208
+    }
+  }
+}

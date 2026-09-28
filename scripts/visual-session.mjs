@@ -1,0 +1,9 @@
+import { chromium } from '@playwright/test';
+import { createInterface } from 'node:readline';
+const server=await chromium.launchServer({headless:true,channel:'chrome'});const browser=await chromium.connect(server.wsEndpoint());
+const page=await browser.newPage({viewport:{width:1440,height:1100}});page.on('pageerror',e=>console.log('PAGE ERROR',e.message));
+console.log(`READY browser PID ${server.process().pid}`);
+const rl=createInterface({input:process.stdin,terminal:false});
+try{for await(const line of rl){try{const command=JSON.parse(line);if(command.action==='close')break;
+ if(command.action==='capture'){await page.setViewportSize({width:command.mobile?390:1440,height:command.mobile?844:1100});await page.goto('http://127.0.0.1:5173',{waitUntil:'networkidle'});await page.locator('#landscape[data-ready="true"]').waitFor();await page.locator('#landscape[data-detail-ready="true"]').waitFor();await page.locator('#explorer').scrollIntoViewIfNeeded();if(command.preset)await page.locator(`[data-focus="${command.preset}"]`).click();if(command.compare)await page.locator(`[data-scale="${command.compare}"]`).click();await page.waitForTimeout(2400);const name=command.name||'real-terrain';await page.locator('.explorer').screenshot({path:`artifacts/${name}.png`});if(command.full)await page.screenshot({path:`artifacts/${name}-full.png`,fullPage:true});console.log(JSON.stringify({saved:name,rayHeight:await page.locator('#landscape').getAttribute('data-camera-ray-height-meters'),overflow:await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),ready:await page.locator('#landscape').getAttribute('data-ready')}));}
+ }catch(e){console.log('COMMAND ERROR',e.message);}}}finally{await browser.close();const pid=server.process().pid;await server.close();console.log(`CLOSED ${pid}`);}
